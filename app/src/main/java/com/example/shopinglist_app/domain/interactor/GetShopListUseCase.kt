@@ -1,10 +1,10 @@
 package com.example.shopinglist_app.domain.interactor
 
-import com.example.shopinglist_app.domain.ShopItem
+import com.example.shopinglist_app.domain.entity.ShopItem
+import com.example.shopinglist_app.domain.repository.Repository
 
-class GetShopListUseCase {
-
+class GetShopListUseCase(private val repository: Repository) {
      fun getShopList():List<ShopItem>{
-         TODO()
+            return repository.getShopList()
     }
 }
