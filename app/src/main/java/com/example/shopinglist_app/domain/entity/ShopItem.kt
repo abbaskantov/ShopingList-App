@@ -1,8 +1,12 @@
 package com.example.shopinglist_app.domain.entity
 
 data class ShopItem(
-    val id:Int,
-    val count:Int,
     val name:String,
-    val enabled:Boolean
-)
+    val count:Int,
+    val enabled:Boolean,
+    var id: Int = UNDEFINED_ID
+){
+    companion object{
+        const val UNDEFINED_ID = -1
+    }
+}
