@@ -10,7 +10,7 @@ object RepositoryImpl:Repository{
     private val shopItemList = mutableListOf<ShopItem>()
     private var autoIncrementId = 0
 
-    private val shopListLD = MutableLiveData<List<ShopItem>>()
+    private val shopListLiveData = MutableLiveData<List<ShopItem>>()
 
     override fun addShopItem(shopItem: ShopItem) {
         if (shopItem.id == ShopItem.UNDEFINED_ID){
@@ -18,9 +18,7 @@ object RepositoryImpl:Repository{
         }
         shopItemList.add(shopItem)
         updateList()
-
     }
-
     override fun getShopItem(shopItemId: Int): ShopItem {
         return shopItemList.find {
             it.id ==  shopItemId
@@ -39,11 +37,10 @@ object RepositoryImpl:Repository{
 
     }
     override fun getShopList(): LiveData<List<ShopItem>> {
-        return shopListLD
+        return shopListLiveData
     }
 
     private fun updateList(){
-        shopListLD.value = shopItemList.toList()
+        shopListLiveData.value = shopItemList.toList()
     }
-
 }

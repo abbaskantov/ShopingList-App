@@ -8,8 +8,4 @@ interface Repository {
     fun deleteShopItem(shopItem: ShopItem) //удаление объекта
     fun refactorShopItem(shopItem: ShopItem) // редактирование объекта
     fun getShopList():LiveData<List<ShopItem>> // получение списка объектов
-
-
-
-
 }

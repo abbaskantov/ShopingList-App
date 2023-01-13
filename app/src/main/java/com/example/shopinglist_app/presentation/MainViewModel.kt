@@ -14,6 +14,7 @@ class MainViewModel:ViewModel() {
     private val getShopListUseCase = GetShopListUseCase(repository)
     private val refactorShopItemUseCase = RefactorShopItemUseCase(repository)
 
+
      val shopList = getShopListUseCase.getShopList()
 
     fun deleteShopItem(shopItem: ShopItem){
@@ -24,4 +25,5 @@ class MainViewModel:ViewModel() {
         val newItem = shopItem.copy(enabled = !shopItem.enabled)
         refactorShopItemUseCase.refactorShopItem(shopItem = shopItem)
     }
+
 }
