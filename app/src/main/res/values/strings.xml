@@ -2,4 +2,8 @@
     <string name="app_name">ShopingList-App</string>
     <string name="textview_item">textView Item</string>
     <string name="_1">1</string>
+    <string name="unknownType">неизвестный тип:</string>
+    <string name="label">Название</string>
+    <string name="count">Количество</string>
+    <string name="save">сoхранить</string>
 </resources>
