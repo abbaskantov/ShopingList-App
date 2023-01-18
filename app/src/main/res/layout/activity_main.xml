@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.MainActivity">
+    tools:context=".presentation.main_screen.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/shopItemRecyclerView"
@@ -26,7 +26,8 @@
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_playlist_add_24" />
+        app:srcCompat="@drawable/ic_baseline_playlist_add_24"
+        tools:ignore="ContentDescription" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
